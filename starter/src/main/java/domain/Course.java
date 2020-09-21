@@ -10,14 +10,14 @@ public class Course {
 
 	private String description;
 
-	private BigDecimal cost;
+	private BigDecimal fees;
 
-	public Course(Integer id, String name, String description, BigDecimal cost) {
+	public Course(Integer id, String name, String description, BigDecimal fees) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.description = description;
-		this.cost = cost;
+		this.fees = fees;
 	}
 
 	public Integer getId() {
@@ -44,12 +44,12 @@ public class Course {
 		this.description = description;
 	}
 
-	public BigDecimal getCost() {
-		return cost;
+	public BigDecimal getFees() {
+		return fees;
 	}
 
-	public void setCost(BigDecimal cost) {
-		this.cost = cost;
+	public void setFees(BigDecimal fees) {
+		this.fees = fees;
 	}
 
 }

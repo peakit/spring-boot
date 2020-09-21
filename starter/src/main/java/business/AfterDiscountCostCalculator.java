@@ -13,7 +13,7 @@ public class AfterDiscountCostCalculator implements CostCalculator {
 
 	@Override
 	public BigDecimal calculateCost(Learner learner, Course course) {
-		BigDecimal courseFee = course.getCost();
+		BigDecimal courseFee = course.getFees();
 		BigDecimal totalCost = courseFee;
 
 		Double discPct = ds.getSaleDayDiscount();

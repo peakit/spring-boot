@@ -9,7 +9,7 @@ public class AtMarketPriceCostCalculator implements CostCalculator {
 
 	@Override
 	public BigDecimal calculateCost(Learner learner, Course course) {
-		return course.getCost();
+		return course.getFees();
 	}
 
 }
