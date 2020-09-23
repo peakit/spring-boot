@@ -1,9 +1,9 @@
-package com.peakit.dao;
+package com.peakit.learner.dao;
 
 import java.math.BigDecimal;
 
-import com.peakit.domain.Course;
-import com.peakit.domain.Learner;
+import com.peakit.learner.domain.Course;
+import com.peakit.learner.domain.Learner;
 
 public interface Datasource {
 

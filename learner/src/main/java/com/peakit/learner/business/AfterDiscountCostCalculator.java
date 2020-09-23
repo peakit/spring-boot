@@ -1,15 +1,17 @@
-package com.peakit.business;
+package com.peakit.learner.business;
 
 import java.math.BigDecimal;
 
-import com.peakit.dao.Datasource;
-import com.peakit.dao.SimpleDatasource;
-import com.peakit.domain.Course;
-import com.peakit.domain.Learner;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.peakit.learner.dao.Datasource;
+import com.peakit.learner.domain.Course;
+import com.peakit.learner.domain.Learner;
 
 public class AfterDiscountCostCalculator implements CostCalculator {
 
-	private Datasource ds = new SimpleDatasource();
+	@Autowired
+	private Datasource ds;
 
 	@Override
 	public BigDecimal calculateCost(Learner learner, Course course) {
@@ -21,6 +23,10 @@ public class AfterDiscountCostCalculator implements CostCalculator {
 			totalCost = courseFee.subtract(courseFee.multiply(BigDecimal.valueOf(discPct)));
 		}
 		return totalCost;
+	}
+
+	public void setDs(Datasource ds) {
+		this.ds = ds;
 	}
 
 }

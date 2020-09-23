@@ -1,4 +1,4 @@
-package com.peakit.api;
+package com.peakit.learner.api;
 
 import java.math.BigDecimal;
 

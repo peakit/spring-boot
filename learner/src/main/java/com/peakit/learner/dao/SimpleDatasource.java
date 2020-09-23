@@ -1,4 +1,4 @@
-package com.peakit.dao;
+package com.peakit.learner.dao;
 
 import java.math.BigDecimal;
 import java.util.HashMap;
@@ -6,11 +6,13 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
+import org.springframework.stereotype.Component;
 import org.springframework.util.CollectionUtils;
 
-import com.peakit.domain.Course;
-import com.peakit.domain.Learner;
+import com.peakit.learner.domain.Course;
+import com.peakit.learner.domain.Learner;
 
+@Component
 public class SimpleDatasource implements Datasource {
 
 	private Set<Learner> learners = new HashSet<>();
@@ -33,7 +35,7 @@ public class SimpleDatasource implements Datasource {
 	@Override
 	public void addSaleDayDiscount(Double discountPct) {
 		if (discountPct != null) {
-			discountPct = this.discountPct;
+			this.discountPct = discountPct;
 		}
 	}
 

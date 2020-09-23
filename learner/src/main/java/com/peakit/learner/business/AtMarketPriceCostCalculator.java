@@ -1,9 +1,9 @@
-package com.peakit.business;
+package com.peakit.learner.business;
 
 import java.math.BigDecimal;
 
-import com.peakit.domain.Course;
-import com.peakit.domain.Learner;
+import com.peakit.learner.domain.Course;
+import com.peakit.learner.domain.Learner;
 
 public class AtMarketPriceCostCalculator implements CostCalculator {
 
