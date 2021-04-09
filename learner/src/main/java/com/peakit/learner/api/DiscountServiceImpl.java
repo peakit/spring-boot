@@ -23,7 +23,7 @@ public class DiscountServiceImpl implements DiscountService {
 	@Override
 	@GetMapping(path = "/discount")
 	public Double discount() {
-		return ds.getSaleDayDiscount();
+		return ds.getSaleDayDiscount() == null ? 0.00 : ds.getSaleDayDiscount();
 	}
 
 	public void setDs(Datasource ds) {
